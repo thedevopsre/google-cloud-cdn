@@ -1,0 +1,21 @@
+module "static_website" {
+  source                                      = "./modules/cloud-cdn"
+  project_id                                  = var.project_id
+  bucket_name                                 = var.bucket_name
+  cdn_enabled                                 = var.cdn_enabled
+  enable_logging                              = var.enable_logging
+  custom_domain                               = var.custom_domain
+  cdn_service_account_name                    = var.cdn_service_account_name
+  location                                    = var.location
+  fqdn_domain                                 = var.fqdn_domain
+  network_endpoint_name                       = var.network_endpoint_name
+  main_page_suffix                            = var.main_page_suffix
+  not_found_page                              = var.not_found_page
+  load_balancing_scheme                       = var.load_balancing_scheme
+  region                                      = var.region
+  cdn_path_rules                              = var.cdn_path_rules
+  cdn_policy                                  = var.cdn_policy
+  http_forwarding_rule_load_balancing_scheme  = var.http_forwarding_rule_load_balancing_scheme
+  https_forwarding_rule_load_balancing_scheme = var.https_forwarding_rule_load_balancing_scheme
+  custom_error_response_policy                = var.custom_error_response_policy
+}
